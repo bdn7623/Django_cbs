@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+    <nav>
+        <h2>Всі категорії</h2>
+        {% for category in categories %}
+            <p>
+                <a href="/catalog/catalog/{{category.id}}">{{category.category_name}}</a>
+            </p>
+        {% endfor %}
+    </nav>
+</body>
+</html>
