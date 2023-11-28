@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Response</title>
+</head>
+<body>
+    <form class="response-form" method="POST">
+        {% csrf_token %}
+        <p>Оберіть продукт: {{form.products}}</p>
+        <p>Додати картинку: {{form.img}}</p>
+        <p>Ввести пошту: {{form.email}}</p>
+        <p>Додати оцінку: {{form.choice_evaluations}}</p>
+        <p>Додати відгук: {{form.reaction}}</p>
+        <p>Ввести телефон: {{form.phone}}</p>
+        <p><button>Send</button></p>
+    </form>
+</body>
+</html>

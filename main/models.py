@@ -119,7 +119,7 @@ class User(models.Model):
     password2 = models.CharField(max_length=255, null=True, blank=True)
     country = models.CharField(max_length=255, null=True, blank=True)
     email = models.EmailField(default='qwert@gmai.com', null=True)
-    phone = models.IntegerField(null=True, blank=True)
+    phone = models.CharField(max_length=17, default=+380-00-000-00-00)
 
     def __str__(self):
         """
@@ -165,4 +165,4 @@ class Response(models.Model):
     email = models.EmailField(default='qwert@gmai.com', null=True)
     choice_evaluations = models.IntegerField(default=0, choices=EVALUATION_CHOICES)
     reaction = models.IntegerField(default=0, choices=REACTIONS)
-    phone = models.IntegerField(null=True, blank=True)
+    phone = models.CharField(max_length=17, default=+380-00-000-00-00)

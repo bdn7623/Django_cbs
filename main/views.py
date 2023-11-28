@@ -136,4 +136,4 @@ def response_get(request):
     context = {
         'form': form
     }
-    return render(request, 'main/create.html', context)
+    return render(request, 'main/response.html', context)
